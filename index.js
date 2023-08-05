@@ -9,13 +9,14 @@ require('dotenv').config();
 app.use(cors('*'));
 
 const baseURL = 'http://dataservice.accuweather.com'
-const apiKey = process.env.API_KEY;
+const apiKey = process.env.API_KEY || 'n3dsU8isX5GGSbrRWMrxOxGK7Wb3TgIQ';
 const searchByTextURL = `${baseURL}/locations/v1/cities/autocomplete`
 const geoPositionURL = `${baseURL}/locations/v1/cities/geoposition/search`
 
 app.get('/', async (req, res) => {
   console.log('test');
   console.log(apiKey);
+  console.log('/etc/secrets/APIKEY');
 
   try {
     res.json(apiKey);
