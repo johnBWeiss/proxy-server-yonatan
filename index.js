@@ -9,21 +9,22 @@ require('dotenv').config();
 app.use(cors('*'));
 
 const baseURL = 'http://dataservice.accuweather.com'
-const apiKey = process.env.API_KEY || 'R2wMZwBSVoGRpGVartAWpcPs7Oaz9zsy';
 const searchByTextURL = `${baseURL}/locations/v1/cities/autocomplete`
 const geoPositionURL = `${baseURL}/locations/v1/cities/geoposition/search`
 
-app.get('/', async (req, res) => {
-  console.log('test');
-  console.log(apiKey);
+const apiKeysArray = ['9x0oehpt46AI4aK2veZLfftoKZfi3AR8', 'R2wMZwBSVoGRpGVartAWpcPs7Oaz9zsy', 'IeogV01qgqGpHm1XxALIFB1JAtbxBs7E']
+// const apiKeysArray = ['9x0oehpt46AI4aK2veZLfftoKZfi3AR8', 'R2wMZwBSVoGRpGVartAWpcPs7Oaz9zsy', 'IeogV01qgqGpHm1XxALIFB1JAtbxBs7E', 'n3dsU8isX5GGSbrRWMrxOxGK7Wb3TgIQ']
 
-  try {
-    res.json(apiKey);
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
-});
+const getRandomKey = (apiKeysArray) => {
+  const randomIndex = Math.floor(Math.random() * apiKeysArray.length);
+  return apiKeysArray[randomIndex];
+}
+
+const apiKey = getRandomKey(apiKeysArray)
+
+
 app.get('/getFiveDays/:cityCode', async (req, res) => {
+  const apiKey = getNextApiKey();
   const cityCode = req.params.cityCode;
 
   try {
