@@ -7,8 +7,6 @@ const PORT = process.env.PORT || 8081;
 require('dotenv').config();
 app.use(cors('*'));
 
-
-
 const baseURL = 'http://dataservice.accuweather.com'
 const apiKey = process.env.API_KEY; const searchByTextURL = `${baseURL}/locations/v1/cities/autocomplete`
 const geoPositionURL = `${baseURL}/locations/v1/cities/geoposition/search`
