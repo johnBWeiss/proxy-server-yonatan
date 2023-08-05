@@ -10,7 +10,7 @@ const apiKey = process.env.API_KEY;
 app.get('/', async (req, res) => {
 
   try {
-    let response = await axios(`${baseURL}/forecasts/v1/daily/5day/${payload.cityCode}?apiKey=${apiKey}&language=en-us`)
+    let response = await axios(`${baseURL}/forecasts/v1/daily/5day/215854?apiKey=${apiKey}&language=en-us`)
     console.log(response);
 
   } catch (error) {
