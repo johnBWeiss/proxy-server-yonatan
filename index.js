@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 8081;
 
 app.get('/', async (req, res) => {
-  res.send('hi');
+  res.send('hi!');
 
   try {
 
