@@ -10,10 +10,11 @@ const baseURL = 'http://dataservice.accuweather.com'
 const apiKey = process.env.API_KEY; const searchByTextURL = `${baseURL}/locations/v1/cities/autocomplete`
 const geoPositionURL = `${baseURL}/locations/v1/cities/geoposition/search`
 
-app.get('/getFiveDays', async (req, res) => {
+app.get('/getFiveDays/:cityCode', async (req, res) => {
+  const cityCode = req.params.cityCode;
 
   try {
-    let response = await axios(`${baseURL}/forecasts/v1/daily/5day/215854?apikey=${apiKey}`)
+    let response = await axios(`${baseURL}/forecasts/v1/daily/5day/${cityCode}?apikey=${apiKey}`)
     res.json(response?.data);
   } catch (error) {
     res.status(400).json({ error: error.message });
