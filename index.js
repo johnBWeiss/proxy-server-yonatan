@@ -15,6 +15,7 @@ const geoPositionURL = `${baseURL}/locations/v1/cities/geoposition/search`
 
 app.get('/', async (req, res) => {
   console.log('test');
+  console.log(apiKey);
 
   try {
     res.json(apiKey);
