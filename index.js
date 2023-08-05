@@ -5,7 +5,6 @@ const cors = require('cors'); // Import the cors package
 
 const PORT = process.env.PORT || 8081;
 require('dotenv').config();
-
 app.use(cors('*'));
 
 
