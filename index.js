@@ -13,7 +13,7 @@ app.get('/', async (req, res) => {
 
   try {
     let response = await axios(`${baseURL}/forecasts/v1/daily/5day/215854?apikey=${apiKey}`)
-    res.json(data, apiKey);
+    res.json(response, apiKey);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
