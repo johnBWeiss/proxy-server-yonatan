@@ -22,9 +22,19 @@ const getRandomKey = (apiKeysArray) => {
 
 const apiKey = getRandomKey(apiKeysArray)
 
+app.get('/', async (req, res) => {
+  console.log(apiKey);
+  try {
+
+  } catch (error) {
+    console.log(error.message);
+    res.status(400).json({ error: error.message });
+  }
+});
+
+
 
 app.get('/getFiveDays/:cityCode', async (req, res) => {
-  const apiKey = getNextApiKey();
   const cityCode = req.params.cityCode;
 
   try {
