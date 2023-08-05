@@ -12,7 +12,7 @@ const baseURL = 'http://dataservice.accuweather.com'
 const searchByTextURL = `${baseURL}/locations/v1/cities/autocomplete`
 const geoPositionURL = `${baseURL}/locations/v1/cities/geoposition/search`
 
-const apiKeysArray = ['9x0oehpt46AI4aK2veZLfftoKZfi3AR8', 'R2wMZwBSVoGRpGVartAWpcPs7Oaz9zsy', 'IeogV01qgqGpHm1XxALIFB1JAtbxBs7E']
+const apiKeysArray = ['9x0oehpt46AI4aK2veZLfftoKZfi3AR8', 'R2wMZwBSVoGRpGVartAWpcPs7Oaz9zsy']
 // const apiKeysArray = ['9x0oehpt46AI4aK2veZLfftoKZfi3AR8', 'R2wMZwBSVoGRpGVartAWpcPs7Oaz9zsy', 'IeogV01qgqGpHm1XxALIFB1JAtbxBs7E', 'n3dsU8isX5GGSbrRWMrxOxGK7Wb3TgIQ']
 
 const getRandomKey = (apiKeysArray) => {
