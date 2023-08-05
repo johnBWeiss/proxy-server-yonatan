@@ -13,6 +13,15 @@ const apiKey = process.env.API_KEY;
 const searchByTextURL = `${baseURL}/locations/v1/cities/autocomplete`
 const geoPositionURL = `${baseURL}/locations/v1/cities/geoposition/search`
 
+app.get('/', async (req, res) => {
+  console.log('test');
+
+  try {
+    res.json(apiKey);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
 app.get('/getFiveDays/:cityCode', async (req, res) => {
   const cityCode = req.params.cityCode;
 
