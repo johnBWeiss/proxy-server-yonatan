@@ -29,6 +29,7 @@ app.get('/getFiveDays/:cityCode', async (req, res) => {
     let response = await axios(`${baseURL}/forecasts/v1/daily/5day/${cityCode}?apikey=${apiKey}`)
     res.json(response?.data);
   } catch (error) {
+    console.log(error.message);
     res.status(400).json({ error: error.message });
   }
 });
@@ -38,6 +39,7 @@ app.get('/searchText/:text', async (req, res) => {
     let response = await axios(`${searchByTextURL}?apikey=${apiKey}&q=${searchText}&language=en-us`)
     res.json(response?.data);
   } catch (error) {
+    console.log(error.message);
     res.status(400).json({ error: error.message });
   }
 });
@@ -47,6 +49,7 @@ app.get('/getSingleCity/:cityCode', async (req, res) => {
     let response = await axios(`${baseURL}/currentconditions/v1/${cityCode}?apikey=${apiKey}&language=en-us`)
     res.json(response?.data);
   } catch (error) {
+    console.log(error.message);
     res.status(400).json({ error: error.message });
   }
 });
@@ -58,6 +61,7 @@ app.get('/getGeoPosition/:lat/:long', async (req, res) => {
     )
     res.json(response?.data);
   } catch (error) {
+    console.log(error.message);
     res.status(400).json({ error: error.message });
   }
 });
