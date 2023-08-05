@@ -8,7 +8,6 @@ const baseURL = 'http://dataservice.accuweather.com'
 const apiKey = process.env.API_KEY;
 
 app.get('/', async (req, res) => {
-  res.send('hi');
 
   try {
     let response = await axios(`${baseURL}/forecasts/v1/daily/5day/${payload.cityCode}?apiKey=${apiKey}&language=en-us`)
