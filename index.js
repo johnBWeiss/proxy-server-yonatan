@@ -36,6 +36,8 @@ app.get('/', async (req, res) => {
 
 app.get('/getFiveDays/:cityCode', async (req, res) => {
   const cityCode = req.params.cityCode;
+  console.log(apiKey);
+
 
   try {
     let response = await axios(`${baseURL}/forecasts/v1/daily/5day/${cityCode}?apikey=${apiKey}`)
@@ -46,6 +48,8 @@ app.get('/getFiveDays/:cityCode', async (req, res) => {
   }
 });
 app.get('/searchText/:text', async (req, res) => {
+  console.log(apiKey);
+
   const searchText = req.params.text;
   try {
     let response = await axios(`${searchByTextURL}?apikey=${apiKey}&q=${searchText}&language=en-us`)
@@ -56,6 +60,8 @@ app.get('/searchText/:text', async (req, res) => {
   }
 });
 app.get('/getSingleCity/:cityCode', async (req, res) => {
+  console.log(apiKey);
+
   const cityCode = req.params.cityCode;
   try {
     let response = await axios(`${baseURL}/currentconditions/v1/${cityCode}?apikey=${apiKey}&language=en-us`)
@@ -66,6 +72,8 @@ app.get('/getSingleCity/:cityCode', async (req, res) => {
   }
 });
 app.get('/getGeoPosition/:lat/:long', async (req, res) => {
+  console.log(apiKey);
+
   const lat = req.params.lat;
   const long = req.params.long;
   try {
