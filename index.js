@@ -13,7 +13,6 @@ const searchByTextURL = `${baseURL}/locations/v1/cities/autocomplete`
 const geoPositionURL = `${baseURL}/locations/v1/cities/geoposition/search`
 
 const apiKeysArray = ['IeogV01qgqGpHm1XxALIFB1JAtbxBs7E', 'n3dsU8isX5GGSbrRWMrxOxGK7Wb3TgIQ', '9x0oehpt46AI4aK2veZLfftoKZfi3AR8', 'R2wMZwBSVoGRpGVartAWpcPs7Oaz9zsy']
-// const apiKeysArray = ['9x0oehpt46AI4aK2veZLfftoKZfi3AR8', 'R2wMZwBSVoGRpGVartAWpcPs7Oaz9zsy', 'IeogV01qgqGpHm1XxALIFB1JAtbxBs7E', 'n3dsU8isX5GGSbrRWMrxOxGK7Wb3TgIQ']
 
 const getRandomKey = (apiKeysArray) => {
   const randomIndex = Math.floor(Math.random() * apiKeysArray.length);
@@ -35,7 +34,8 @@ app.get('/', async (req, res) => {
 
 app.get('/getFiveDays/:cityCode', async (req, res) => {
   const cityCode = req.params.cityCode;
-  const apiKey = getRandomKey(apiKeysArray)
+  // const apiKey = getRandomKey(apiKeysArray)
+  const apiKey = 's0jaA8ot7GpKr1vrvB2U7l1Hzvebkt35'
   console.log(apiKey);
 
 
@@ -48,7 +48,9 @@ app.get('/getFiveDays/:cityCode', async (req, res) => {
   }
 });
 app.get('/searchText/:text', async (req, res) => {
-  const apiKey = getRandomKey(apiKeysArray)
+  // const apiKey = getRandomKey(apiKeysArray)
+  const apiKey = 's0jaA8ot7GpKr1vrvB2U7l1Hzvebkt35'
+
   console.log(apiKey);
 
   const searchText = req.params.text;
@@ -61,7 +63,9 @@ app.get('/searchText/:text', async (req, res) => {
   }
 });
 app.get('/getSingleCity/:cityCode', async (req, res) => {
-  const apiKey = getRandomKey(apiKeysArray)
+  // const apiKey = getRandomKey(apiKeysArray)
+  const apiKey = 's0jaA8ot7GpKr1vrvB2U7l1Hzvebkt35'
+
   console.log(apiKey);
 
   const cityCode = req.params.cityCode;
@@ -74,7 +78,9 @@ app.get('/getSingleCity/:cityCode', async (req, res) => {
   }
 });
 app.get('/getGeoPosition/:lat/:long', async (req, res) => {
-  const apiKey = getRandomKey(apiKeysArray)
+  // const apiKey = getRandomKey(apiKeysArray)
+  const apiKey = 's0jaA8ot7GpKr1vrvB2U7l1Hzvebkt35'
+
   console.log(apiKey);
 
   const lat = req.params.lat;
