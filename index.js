@@ -34,8 +34,8 @@ app.get('/', async (req, res) => {
 
 app.get('/getFiveDays/:cityCode', async (req, res) => {
   const cityCode = req.params.cityCode;
-  // const apiKey = getRandomKey(apiKeysArray)
-  const apiKey = 's0jaA8ot7GpKr1vrvB2U7l1Hzvebkt35'
+  const apiKey = getRandomKey(apiKeysArray)
+  // const apiKey = 's0jaA8ot7GpKr1vrvB2U7l1Hzvebkt35'
   console.log(apiKey);
 
 
@@ -48,8 +48,8 @@ app.get('/getFiveDays/:cityCode', async (req, res) => {
   }
 });
 app.get('/searchText/:text', async (req, res) => {
-  // const apiKey = getRandomKey(apiKeysArray)
-  const apiKey = 's0jaA8ot7GpKr1vrvB2U7l1Hzvebkt35'
+  const apiKey = getRandomKey(apiKeysArray)
+  // const apiKey = 's0jaA8ot7GpKr1vrvB2U7l1Hzvebkt35'
 
   console.log(apiKey);
 
@@ -63,8 +63,8 @@ app.get('/searchText/:text', async (req, res) => {
   }
 });
 app.get('/getSingleCity/:cityCode', async (req, res) => {
-  // const apiKey = getRandomKey(apiKeysArray)
-  const apiKey = 's0jaA8ot7GpKr1vrvB2U7l1Hzvebkt35'
+  const apiKey = getRandomKey(apiKeysArray)
+  // const apiKey = 's0jaA8ot7GpKr1vrvB2U7l1Hzvebkt35'
 
   console.log(apiKey);
 
@@ -78,8 +78,8 @@ app.get('/getSingleCity/:cityCode', async (req, res) => {
   }
 });
 app.get('/getGeoPosition/:lat/:long', async (req, res) => {
-  // const apiKey = getRandomKey(apiKeysArray)
-  const apiKey = 's0jaA8ot7GpKr1vrvB2U7l1Hzvebkt35'
+  const apiKey = getRandomKey(apiKeysArray)
+  // const apiKey = 's0jaA8ot7GpKr1vrvB2U7l1Hzvebkt35'
 
   console.log(apiKey);
 
