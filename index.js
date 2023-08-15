@@ -20,7 +20,6 @@ const getRandomKey = (apiKeysArray) => {
 app.get('/getFiveDays/:cityCode', async (req, res) => {
   const cityCode = req.params.cityCode;
   const apiKey = getRandomKey(apiKeysArray);
-
   try {
     let response = await axios(`${baseURL}/forecasts/v1/daily/5day/${cityCode}?apikey=${apiKey}`)
     res.json(response?.data);
@@ -31,8 +30,7 @@ app.get('/getFiveDays/:cityCode', async (req, res) => {
 });
 
 app.get('/searchText/:text', async (req, res) => {
-  const apiKey = getRandomKey(apiKeysArray);
-  const searchText = req.params.text;
+  const apiKey = getRandomKey(apiKeysArray); const searchText = req.params.text;
   try {
     let response = await axios(`${searchByTextURL}?apikey=${apiKey}&q=${searchText}&language=en-us`)
     res.json(response?.data);
@@ -44,7 +42,6 @@ app.get('/searchText/:text', async (req, res) => {
 
 app.get('/getSingleCity/:cityCode', async (req, res) => {
   const apiKey = getRandomKey(apiKeysArray);
-
   const cityCode = req.params.cityCode;
   try {
     let response = await axios(`${baseURL}/currentconditions/v1/${cityCode}?apikey=${apiKey}&language=en-us`)
@@ -57,7 +54,6 @@ app.get('/getSingleCity/:cityCode', async (req, res) => {
 
 app.get('/getGeoPosition/:lat/:long', async (req, res) => {
   const apiKey = getRandomKey(apiKeysArray);
-
   const lat = req.params.lat;
   const long = req.params.long;
   try {
