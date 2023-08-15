@@ -10,7 +10,8 @@ app.use(cors('*'));
 const baseURL = 'http://dataservice.accuweather.com'
 const searchByTextURL = `${baseURL}/locations/v1/cities/autocomplete`
 const geoPositionURL = `${baseURL}/locations/v1/cities/geoposition/search`
-const apiKeysArray = ['LuXt1Rlu5zBXvppMbYi5Ms8kB0X1Tfvc', 'CjfrofJZlG4PhsDzPl4O6ErKHBmGE77F', 'GBOpYKJGyAyD8E5W1mI86b3pA3HnbC5O', 'IeogV01qgqGpHm1XxALIFB1JAtbxBs7E', 'n3dsU8isX5GGSbrRWMrxOxGK7Wb3TgIQ', '9x0oehpt46AI4aK2veZLfftoKZfi3AR8', 'R2wMZwBSVoGRpGVartAWpcPs7Oaz9zsy']
+const apiKeysArray = ['LuXt1Rlu5zBXvppMbYi5Ms8kB0X1Tfvc', 'CjfrofJZlG4PhsDzPl4O6ErKHBmGE77F', 'GBOpYKJGyAyD8E5W1mI86b3pA3HnbC5O', 'IeogV01qgqGpHm1XxALIFB1JAtbxBs7E', 'n3dsU8isX5GGSbrRWMrxOxGK7Wb3TgIQ', 'R2wMZwBSVoGRpGVartAWpcPs7Oaz9zsy']
+// const apiKeysArray = ['LuXt1Rlu5zBXvppMbYi5Ms8kB0X1Tfvc', 'CjfrofJZlG4PhsDzPl4O6ErKHBmGE77F', 'GBOpYKJGyAyD8E5W1mI86b3pA3HnbC5O', 'IeogV01qgqGpHm1XxALIFB1JAtbxBs7E', 'n3dsU8isX5GGSbrRWMrxOxGK7Wb3TgIQ', '9x0oehpt46AI4aK2veZLfftoKZfi3AR8', 'R2wMZwBSVoGRpGVartAWpcPs7Oaz9zsy']
 
 const getRandomKey = (apiKeysArray) => {
   const randomIndex = Math.floor(Math.random() * apiKeysArray.length);
